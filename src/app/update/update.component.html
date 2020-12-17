@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content=""/>
+    <link rel="shortcut icon" href="/Docauto/Img/icono.ico"/>
+    <title>Alta de Usuarios</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>   
+	
+<style>
+
+</style>
+</head>
+<h1 style="text-align: center;"><img src="assets/img/Sysminigletter.png" height="15%" width="15%" align="left"/>Administración de Usuarios</h1>
+<br>
+<h2 style="text-align: center;">Actualice un Usuario</h2>
+<body>
+	<!-- <div class="panel panel-primary">
+		<div class="panel-heading">
+            <h1><img src="/Img/SVS.jpg" width="250px"/> Actualización de Usuario</h1>
+        </div>
+    </div>-->
+    
+<form id="datosnuevo" th:action="@{/menusr/updateUsuario}" method="POST">
+<br>
+	<table border="1"  style="margin: 0 auto;" id="Data">
+  	<tr>
+		<td><label for="nombre">Nombre</label></td>
+		<td><input type="text" class="form-control" name="nombreusr" placeholder="Nombre"/></td>
+    </tr>
+ 	<tr>
+		<td><label for="apellidopat">Apellido Paterno</label></td>
+		<td><input type="text" class="form-control" name="apellidopat" placeholder="Apellido Paterno"/></td>
+  	</tr>
+    <tr>
+		<td><label for="apellidomat">Apellido Materno</label></td>
+		<td><input type="text" class="form-control" name="apellidomat" placeholder="Apellido Materno"/></td>
+  	</tr>
+    <tr>
+		<td><label for="password">Password</label></td>
+		<td><input type="password" class="form-control" name="password" placeholder="Password" /></td>
+  	</tr>
+    <tr>
+		<td><label for="correo">Correo</label></td>
+		<td><input type="text" class="form-control" name="correo" placeholder="Correo"/></td>
+  	</tr>
+  	 <tr>
+        <td><label  for="rol">Rol</label></td>
+		<td style="text-align: center;">
+		    <select style="align: center;"  name="rol">
+            <option value="USER">USER</option>
+            <option value="ADMIN">ADMIN</option>
+            </select>
+        </td>
+    </tr>
+     <tr>
+        <td><label for="activo">Activo</label></td>
+		<td style="text-align: center;"><input type="checkbox"  name="activo" value="1"></td>
+    </tr>
+  </table>
+  <br>
+  <table style="margin: 0 auto;">
+		<tr>
+  			<td><input type="text" name="usuario" class="form-control" placeholder="Editar Usuario"  maxlength="20" size="12"/></td>
+  			<td><button name="Editar Usuario" id="Update" class="btn btn-primary">Editar Usuario</button></td>
+  		</tr>
+  </table>
+</form> 
+
+<br>
+<br>
+<br>
+<br>
+ <a th:href="@{/menusr/menu}" class="btn btn-success" role="button">REGRESAR AL MENÚ</a>
+</body>
+</html>
